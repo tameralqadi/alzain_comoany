@@ -52,11 +52,17 @@ ob_start();
     </ul>
     <h5>المجموع الكلي: <?= number_format($total, 2) ?> شيكل</h5>
 
-    <div class="mt-4 text-center">
-        <a href="<?= $whatsAppLink ?>" target="_blank" class="btn btn-success btn-lg mb-3">إرسال الطلب عبر واتساب</a><br>
-        <a href="cart.php" class="btn btn-secondary me-2">العودة إلى السلة</a>
-        <a href="index.php" class="btn btn-outline-primary">العودة إلى الصفحة الرئيسية</a>
-    </div>
+<div class="mt-4 text-center">
+    <a href="<?= $whatsAppLink ?>" 
+       target="_blank" 
+       class="btn btn-success btn-lg mb-3" 
+       onclick="setTimeout(() => { window.location.href='thankyou.php'; }, 3000);">
+       ✅ إرسال الطلب عبر واتساب
+    </a><br>
+    <a href="cart.php" class="btn btn-secondary me-2">↩️ العودة إلى السلة</a>
+    <a href="index.php" class="btn btn-outline-primary">🏠 العودة إلى الصفحة الرئيسية</a>
+</div>
+
 </div>
 
 <?php
